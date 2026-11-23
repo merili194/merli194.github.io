@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merili Tiik — veebiarendaja & UI/UX disainer</title>
+  <meta name="description" content="Merili Tiik: TLÜ informaatika (digimeedia) 3. kursuse tudeng. Veebilehed, UI/UX disain ja postrid. Otsin praktikakohta." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATSIOON ===================== -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">Merili&nbsp;Tiik<span class="dot">.</span></a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#minust">Minust</a>
+      <a href="#projektid">Projektid</a>
+      <a href="#disain">Disain</a>
+      <a href="#oskused">Oskused</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="nav__meta">
+      <span class="nav__clock">Tallinn <span id="clock">--:--</span></span>
+      <!-- Kui sul on CV, pane see repo juurkausta nimega cv.pdf ja muuda siin href="cv.pdf" ning tekst "CV ↗" -->
+      <a href="mailto:tiikmerili@gmail.com" class="nav__cv">Kirjuta ↗</a>
+      <button class="nav__burger" id="burger" aria-label="Ava menüü" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Jooksurada: lehe kerimine = 800 m -->
+    <div class="track" id="track" aria-hidden="true">
+      <span class="track__fill" id="trackFill"></span>
+      <span class="track__runner" id="trackRunner">
+        <span class="track__label" id="trackLabel">0 m</span>
+      </span>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero__kicker reveal">
+        <span class="status-dot"></span> Otsin praktikakohta · frontend ja UI/UX
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line reveal">Ideest</span>
+        <span class="line reveal"><em>üritusele,</em></span>
+        <span class="line reveal">Figmast</span>
+        <span class="line reveal"><em>koodini.</em></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__intro reveal">
+          Olen Merili, Tallinna Ülikooli informaatika 3. kursuse tudeng digimeedia suunal.
+          Mulle meeldib viia asjad mõttest päriselt valmis, olgu see Kultuuriklubi üritus
+          koos plakatite ja logistikaga või veebileht, mille kujundan Figmas ja ehitan
+          ise koodiks. Otsin praktikakohta, kus teha seda päris meeskonnas.
+        </p>
+
+        <a href="#projektid" class="badge" aria-label="Vaata projekte">
+          <svg viewBox="0 0 200 200" class="badge__ring" aria-hidden="true">
+            <defs>
+              <path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+            </defs>
+            <text>
+              <textPath href="#circle">vaata projekte ✶ vaata projekte ✶ vaata projekte ✶ </textPath>
+            </text>
+          </svg>
+          <span class="badge__arrow">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== JOOKSEV RIBA ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>HTML</span><i>✶</i>
+        <span>CSS</span><i>✶</i>
+        <span>JavaScript</span><i>✶</i>
+        <span>Figma</span><i>✶</i>
+        <span>UX/UI</span><i>✶</i>
+        <span>Photoshop</span><i>✶</i>
+        <span>Illustrator</span><i>✶</i>
+        <span>Python</span><i>✶</i>
+        <span>MySQL</span><i>✶</i>
+        <span>Git</span><i>✶</i>
+        <span>HTML</span><i>✶</i>
+        <span>CSS</span><i>✶</i>
+        <span>JavaScript</span><i>✶</i>
+        <span>Figma</span><i>✶</i>
+        <span>UX/UI</span><i>✶</i>
+        <span>Photoshop</span><i>✶</i>
+        <span>Illustrator</span><i>✶</i>
+        <span>Python</span><i>✶</i>
+        <span>MySQL</span><i>✶</i>
+        <span>Git</span><i>✶</i>
+      </div>
+    </div>
+
+    <!-- ===================== 01 MINUST ===================== -->
+    <section class="section about" id="minust">
+      <div class="section__label">
+        <span>01</span> Minust
+      </div>
+
+      <div class="about__grid">
+        <div class="about__photo reveal">
+          <div class="photo-frame">
+            <img src="images/web/mina.webp" alt="Merili Tiik" width="703" height="1100" />
+          </div>
+          <span class="sticker">Tere, olen Merili!</span>
+        </div>
+
+        <div class="about__text">
+          <p class="about__lead reveal">
+            Mulle meeldib see hetk, kui disain ja kood lõpuks kokku saavad ning leht
+            hakkab <em>päriselt</em> tööle.
+          </p>
+          <p class="reveal">
+            Oskan lehe Figmas valmis mõelda ja selle ise koodiks ehitada. Digimeedia suund
+            on andnud mulle mõlemad pooled: tehnilise, kus kirjutan koodi, ja visuaalse, kus
+            mõtlen, kuidas kasutaja lehel liigub ja mida ta esimesena näeb.
+          </p>
+          <p class="reveal">
+            Lisaks olen TLÜ Kultuuriklubi turundus- ja kommunikatsioonijuht: korraldan üritusi,
+            kasvatan kogukonda ja teen klubi sotsiaalmeedia visuaalid. 2026. aasta suvel
+            korraldasin Tallinna Ülikoolis MELU üritust alates logistikast ja päevaplaanist
+            kuni sponsoriteni.
+          </p>
+          <p class="reveal">
+            Väljaspool ekraani jooksen 800 meetrit (mõne Eesti meistritiitliga) ja töötan
+            ettekandjana. Rada on õpetanud järjepidevust, saal aga rahulikuks jäämist ka siis, kui laupäeva õhtul on maja täis.
+          </p>
+          <p class="about__quote reveal">„Mida ma ka ei teeks, teen selle nii, et see loeks.“</p>
+          <p class="about__handle reveal">
+            <a href="https://www.instagram.com/merilitiik/" target="_blank" rel="noopener">@merilitiik</a>
+            <span>·</span> Tallinn, Eesti
+          </p>
+        </div>
+      </div>
+
+      <!-- Tugevused -->
+      <div class="strengths">
+        <h3 class="strengths__title reveal">Mida ma <em>kaasa</em> toon</h3>
+        <ol class="strengths__list">
+          <li class="reveal">
+            <span>01</span>
+            <h4>Õpin kiiresti</h4>
+            <p>Uued tööriistad, uus tehnoloogia, uued väljakutsed: võtan need kiiresti omaks ja hakkan kohe tegutsema. Kui annad mulle probleemi, mida ma pole varem näinud, leian sellele lahenduse.</p>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <h4>Märkan detaile</h4>
+            <p>Näen asju, millest teised mööda keritakse: nihkes pikslit, kohmakat lauset või seda üht erijuhtu, mida keegi ei testinud. Just viimased 2% teevad heast tööst suurepärase.</p>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <h4>Meeskonnamängija</h4>
+            <p>Kultuuriklubi üritustest teatejooksuni: parimad tulemused tulevad inimestelt, kes on üksteise jaoks olemas.</p>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <h4>Lahendan probleeme</h4>
+            <p>Olgu see katkine layout, keeruline lähteülesanne või täis saal laupäeva õhtul: jään rahulikuks, mõtlen selgelt ja leian lahenduse.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Kogemus ja haridus (uuemad ees) -->
+      <div class="cv">
+        <div class="cv__group">
+          <h3 class="cv__title reveal">Kogemus</h3>
+          <ul class="timeline">
+            <li class="timeline__item reveal">
+              <span class="timeline__year">2026 suvi</span>
+              <div>
+                <h3>Ürituse korraldaja</h3>
+                <p>Tallinna Ülikool · MELU</p>
+              </div>
+              <p class="timeline__desc">MELU ürituse korraldamine ja logistika koordineerimine, suhtlus osalejatega, päevaplaani koostamine ja koordineerimine ning suhtlus sponsoritega ja koostöö korraldamine.</p>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__year">2025 — praegu</span>
+              <div>
+                <h3>Turundus- ja kommunikatsioonijuht</h3>
+                <p>TLÜ Kultuuriklubi</p>
+              </div>
+              <p class="timeline__desc">Ürituste korraldus, kogukonna kasvatamine, sotsiaalmeedia ning ürituste visuaalid.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv__group">
+          <h3 class="cv__title reveal">Haridus</h3>
+          <ul class="timeline">
+            <li class="timeline__item reveal">
+              <span class="timeline__year">2024 — praegu</span>
+              <div>
+                <h3>Informaatika BA, digimeedia</h3>
+                <p>Tallinna Ülikool</p>
+              </div>
+              <p class="timeline__desc">Veebiarendus, kasutajaliidese disain, andmebaasid ja programmeerimine. Praegu 3. kursusel.</p>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__year">2021 — 2024</span>
+              <div>
+                <h3>Gümnaasium</h3>
+                <p>Pärnu Sütevaka Humanitaargümnaasium</p>
+              </div>
+              <p class="timeline__desc">Gümnaasiumi lõputunnistus.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 PROJEKTID ===================== -->
+    <section class="section projects" id="projektid">
+      <div class="section__label">
+        <span>02</span> Projektid
+      </div>
+
+      <h2 class="section__title reveal">Valitud <em>tööd</em></h2>
+
+      <!--
+        Iga projekt on üks <article class="case">.
+        Pildid on kaustas images/web. Galeriis avanevad pildid on kirjas script.js failis (const galleries).
+      -->
+      <div class="cases">
+
+        <!-- ========== 01 KRINGEL ========== -->
+        <article class="case" data-gallery="kringel">
+          <div class="case__media reveal">
+            <button class="shot shot--main" data-index="0" aria-label="Ava Kringeli pildid">
+              <span class="browser">
+                <span class="browser__bar"><i></i><i></i><i></i><span>kringel · testi koostamine</span></span>
+                <img src="images/web/kringel-koostamine.webp" alt="Kringel: testi koostamise vaade" loading="lazy" width="1400" height="875" />
+              </span>
+            </button>
+            <div class="case__thumbs">
+              <button class="shot" data-index="1"><img src="images/web/kringel-lahendamine.webp" alt="Testi lahendamine" loading="lazy" width="900" height="562" /></button>
+              <button class="shot" data-index="2"><img src="images/web/kringel-testid.webp" alt="Õpetaja testide nimekiri" loading="lazy" width="900" height="562" /></button>
+              <button class="shot" data-index="5"><img src="images/web/kringel-avaleht.webp" alt="Õpilase avaleht" loading="lazy" width="900" height="562" /></button>
+            </div>
+          </div>
+
+          <div class="case__info reveal">
+            <p class="case__type"><span>01</span> Tiimiprojekt · päris klient</p>
+            <h3 class="case__title">Kringel</h3>
+            <p class="case__desc">
+              E-testide platvorm TLÜ teadusköögi õpilasvõistluse KRINGEL eelvooru jaoks:
+              testide koostamine, lahendamine ja hindamine ühes keskkonnas. Varem tehti eelvoor
+              Google Vormidega, mis ei toetanud ajapiiranguid ega keemia- ja füüsikaülesandeid.
+            </p>
+            <dl class="case__meta">
+              <div><dt>Minu roll</dt><dd>Projektijuht, Figma prototüüp, frontend</dd></div>
+              <div><dt>Tiim</dt><dd>5 tudengit</dd></div>
+              <div><dt>Aeg</dt><dd>2025</dd></div>
+            </dl>
+            <ul class="tags">
+              <li>Figma</li><li>JavaScript</li><li>Vite</li><li>Express.js</li><li>MySQL</li><li>Docker</li>
+            </ul>
+            <details class="more">
+              <summary>Loe lähemalt <span class="more__icon" aria-hidden="true"></span></summary>
+              <div class="more__body">
+                <div><h4>Probleem</h4><p>Eelvoor toimus varem Google Vormides. Sealt puudusid ajapiirangud, valemite ja keemiaülesannete tugi ning mugav failide üleslaadimine. Klient vajas tasuta keskkonda, kuhu õpilased saavad siseneda ilma kontota ja mida saab hiljem ka teisteks võistlusteks kohandada.</p></div>
+                <div><h4>Lahendus</h4><p>Kaardistasime kliendikohtumistel nõuded ning tegime wireframe'id ja Figma prototüübi. Rakendusel on eraldi vaated õpilasele, õpetajale ja adminile, ajapiirang, mis algab alles pärast juhendvideot, ning sümbolitega klaviatuur keemia- ja füüsikaülesannete jaoks. Minu vastutada olid kliendisuhtlus, tööjaotus, prototüüp ja osa frontendist.</p></div>
+                <div><h4>Tulemus</h4><p>Töötav platvorm, mis käivitub Dockeriga ja on üles pandud Azure'i pilve. Kood ja dokumentatsioon on GitHubis, et järgmine tiim saaks edasi arendada.</p></div>
+                <div><h4>Mida õppisin</h4><p>Kuidas kliendi soovid tehnilisteks nõueteks tõlkida ja kuidas viieliikmelises tiimis disain ja arendus ühel joonel hoida. Põhjalik ettevalmistus enne kliendikohtumist säästab hiljem palju aega.</p></div>
+              </div>
+            </details>
+            <div class="case__links">
+              <a href="https://github.com/Merili-t/Kringel" target="_blank" rel="noopener" class="link-btn">GitHub <span>↗</span></a>
+              <button class="link-btn link-btn--ghost" data-open="0">Vaata pilte <span>+</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 02 FORMFORGE ========== -->
+        <article class="case case--flip" data-gallery="formforge">
+          <div class="case__media reveal">
+            <button class="shot shot--main" data-index="0" aria-label="Ava FormForge'i pildid">
+              <span class="browser">
+                <span class="browser__bar"><i></i><i></i><i></i><span>formforge · avaleht</span></span>
+                <img src="images/web/formforge-avaleht.webp" alt="FormForge: e-poe avaleht" loading="lazy" width="1400" height="874" />
+              </span>
+            </button>
+            <div class="case__thumbs">
+              <button class="shot" data-index="1"><img src="images/web/formforge-toode.webp" alt="Tooteleht" loading="lazy" width="829" height="518" /></button>
+              <button class="shot" data-index="2"><img src="images/web/formforge-ostukorv.webp" alt="Ostukorv" loading="lazy" width="900" height="562" /></button>
+              <button class="shot" data-index="3"><img src="images/web/formforge-konto.webp" alt="Kasutajakonto" loading="lazy" width="900" height="562" /></button>
+            </div>
+          </div>
+
+          <div class="case__info reveal">
+            <p class="case__type"><span>02</span> UI/UX disain · Figma · pooleli</p>
+            <h3 class="case__title">FormForge</h3>
+            <p class="case__desc">
+              Spordi toidulisandite e-pood, kus ostja ei alusta tootetüübist, vaid oma eesmärgist:
+              lihasmass, vastupidavus, taastumine või biohäkkimine. Pood toob esile just sellele
+              eesmärgile sobivad tooted, et inimene valikute rägastikus ära ei eksiks.
+            </p>
+            <dl class="case__meta">
+              <div><dt>Minu roll</dt><dd>UI/UX disain</dd></div>
+              <div><dt>Maht</dt><dd>~50 ekraani</dd></div>
+              <div><dt>Aeg</dt><dd>2026</dd></div>
+            </dl>
+            <ul class="tags">
+              <li>Figma</li><li>Komponendid</li><li>Olekud</li><li>Muutujad</li><li>Kasutajateekond</li>
+            </ul>
+            <details class="more">
+              <summary>Loe lähemalt <span class="more__icon" aria-hidden="true"></span></summary>
+              <div class="more__body">
+                <div><h4>Probleem</h4><p>Toidulisandite e-poodides on sadu sarnaseid tooteid. Kui ostja peab sirvima tootetüüpide järgi, ei tea ta, millest alustada, ja lahkub sageli ilma ostmata.</p></div>
+                <div><h4>Lahendus</h4><p>Ostja alustab oma eesmärgist (näiteks lihasmass, vastupidavus või taastumine) ja igal eesmärgil on oma kategoorialeht. Lisaks on tooteleht arvustuste ja soovitustega, ostukorv, kassa nii külalisena kui ka kontoga ning kasutajakonto tellimuste, lemmikute ja maksekaartidega. Kõik on üles ehitatud komponentide, olekute ja muutujatega.</p></div>
+                <div><h4>Tulemus</h4><p>Umbes 50 ekraani, mis katavad kogu ostja teekonna. Projekt on pooleli: järgmisena tulevad klikitav prototüüp ja kasutajatestid.</p></div>
+                <div><h4>Mida õppisin</h4><p>Kuidas mõelda süsteemina, mitte üksikute ekraanidena, ja kui palju tööd on erijuhtudes, näiteks maksekaardi eemaldamises või ostmises ilma kontota.</p></div>
+              </div>
+            </details>
+            <div class="case__links">
+              <!-- Soovitus: asenda Figma prototüübi lingiga ja pane jagamiseks "Anyone with the link can view" -->
+              <a href="https://www.figma.com/design/6oR8aIQwaABT8KPSBQE6is/E-pood" target="_blank" rel="noopener" class="link-btn">Figma <span>↗</span></a>
+              <button class="link-btn link-btn--ghost" data-open="0">Vaata pilte <span>+</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 03 REEL ========== -->
+        <article class="case" data-gallery="reel">
+          <div class="case__media reveal">
+            <button class="shot shot--main" data-index="0" aria-label="Ava REELi pildid">
+              <span class="browser browser--dark">
+                <span class="browser__bar"><i></i><i></i><i></i><span>reel · leia oma õhtu film</span></span>
+                <img src="images/web/reel-avaleht.webp" alt="REEL: avaleht" loading="lazy" width="1400" height="875" />
+              </span>
+            </button>
+            <div class="case__thumbs">
+              <button class="shot" data-index="1"><img src="images/web/reel-kusimustik.webp" alt="Küsimustik" loading="lazy" width="900" height="562" /></button>
+              <button class="shot" data-index="2"><img src="images/web/reel-tulemus.webp" alt="Filmisoovituse tulemus" loading="lazy" width="900" height="562" /></button>
+              <button class="shot" data-index="4"><img src="images/web/reel-wireframe.webp" alt="Käsitsi joonistatud wireframe" loading="lazy" width="900" height="562" /></button>
+            </div>
+          </div>
+
+          <div class="case__info reveal">
+            <p class="case__type"><span>03</span> Kursuseprojekt · frontend</p>
+            <h3 class="case__title">REEL</h3>
+            <p class="case__desc">
+              Veebileht, mis leiab sulle õhtuks filmi. Kasutaja vastab viiele küsimusele
+              ja saab vastuste põhjal personaalse soovituse. Lisaks saab filme žanri järgi
+              sirvida ja ise uusi filme soovitada. Alustasime paberil wireframe'idest ja
+              ehitasime lehe mobiilist suure ekraanini.
+            </p>
+            <dl class="case__meta">
+              <div><dt>Minu roll</dt><dd>Avaleht, küsimustik, andmed, wireframe'id</dd></div>
+              <div><dt>Tiim</dt><dd>2 tudengit</dd></div>
+              <div><dt>Aeg</dt><dd>2026</dd></div>
+            </dl>
+            <ul class="tags">
+              <li>HTML</li><li>SASS</li><li>JavaScript</li><li>Responsive</li><li>Ligipääsetavus</li>
+            </ul>
+            <details class="more">
+              <summary>Loe lähemalt <span class="more__icon" aria-hidden="true"></span></summary>
+              <div class="more__body">
+                <div><h4>Probleem</h4><p>Filmi valimine võtab tihti kauem aega kui filmi vaatamine. Kursuse ülesanne oli ehitada interaktiivne leht, mis kasutab semantilist HTML-i, SASS-i ja JavaScripti ning arvestab ligipääsetavusega.</p></div>
+                <div><h4>Lahendus</h4><p>Viie küsimusega küsimustik tuju, žanri ja aja kohta, mille põhjal JavaScript valib andmefailist sobiva filmi. Lisaks filmide nimekiri žanrifiltri ja „Laadi rohkem“ nupuga ning vorm uue filmi soovitamiseks. Minu teha olid avaleht, küsimustik ja andmed, HTML-i semantika, wireframe'id ja README.</p></div>
+                <div><h4>Tulemus</h4><p>Responsive leht mobiilist suure ekraanini, mida on testitud ka klaviatuuriga. Töötasime Giti harudes ja pull requestidega.</p></div>
+                <div><h4>Mida õppisin</h4><p>Koostöö Gitis ja see, kui palju semantiline HTML ligipääsetavust parandab. Järgmisena tahaks ühendada päris filmide API (näiteks TMDB).</p></div>
+              </div>
+            </details>
+            <div class="case__links">
+              <a href="https://github.com/merili194/Kasutajaliideste-disain-ja-arendus" target="_blank" rel="noopener" class="link-btn">GitHub <span>↗</span></a>
+              <button class="link-btn link-btn--ghost" data-open="0">Vaata pilte <span>+</span></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== 03 DISAIN ===================== -->
+    <section class="section design" id="disain">
+      <div class="section__label">
+        <span>03</span> Disain
+      </div>
+
+      <div class="design__head">
+        <h2 class="section__title reveal">Postrid <em>ja</em> visuaalid</h2>
+        <p class="design__intro reveal">
+          Valik visuaale, mida teen TLÜ Kultuuriklubi üritustele turundus- ja
+          kommunikatsioonijuhina: Instagrami postitused, ürituste bännerid ja plakatid.
+        </p>
+      </div>
+
+      <!--
+        Iga rida (.wall__row) näitab pildid ühekõrgusena.
+        style="--r: X" = pildi laius jagatud kõrgusega (nt 1080x1350 → 0.8, 1640x924 → 1.775).
+        data-full = suur pilt galeriis.
+      -->
+
+      <!-- Kultuuriklubi -->
+      <div class="wall">
+        <div class="wall__head reveal">
+          <h3>TLÜ Kultuuriklubi</h3>
+          <p>Ürituste visuaalid · Instagram ja ürituste bännerid</p>
+          <a href="https://www.instagram.com/kultuuriklubitlu/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+
+        <div class="wall__row">
+          <figure class="poster reveal" style="--r: 0.8">
+            <button data-full="images/web/kulta-longpong-6-suur.webp"><img src="images/web/kulta-longpong-6.webp" alt="Long Pong #6" loading="lazy" width="880" height="1100" /></button>
+            <figcaption><strong>Long Pong #6</strong><span>Kultuuriklubi × Saku · postitus</span></figcaption>
+          </figure>
+          <figure class="poster reveal" style="--r: 1.775">
+            <button data-full="images/web/kulta-tutvumisohtu-suur.webp"><img src="images/web/kulta-tutvumisohtu.webp" alt="Kultuuriklubi tutvumisõhtu" loading="lazy" width="1100" height="620" /></button>
+            <figcaption><strong>Tutvumisõhtu</strong><span>Ürituse bänner</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="wall__row">
+          <figure class="poster reveal" style="--r: 1.775">
+            <button data-full="images/web/kulta-malumang-okt-suur.webp"><img src="images/web/kulta-malumang-okt.webp" alt="Mälumäng" loading="lazy" width="1100" height="620" /></button>
+            <figcaption><strong>Mälumäng</strong><span>Ürituse bänner</span></figcaption>
+          </figure>
+          <figure class="poster reveal" style="--r: 0.8">
+            <button data-full="images/web/kulta-boiler-suur.webp"><img src="images/web/kulta-boiler.webp" alt="Boiler Room" loading="lazy" width="880" height="1100" /></button>
+            <figcaption><strong>Boiler Room</strong><span>Ürituse plakat</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== 04 OSKUSED ===================== -->
+    <section class="section skills" id="oskused">
+      <div class="section__label section__label--light">
+        <span>04</span> Oskused
+      </div>
+
+      <div class="skills__grid">
+        <div class="skills__info">
+          <h2 class="section__title reveal">Kood <em>ja</em> disain ühes inimeses.</h2>
+          <p class="reveal">
+            Oskan lehe Figmas valmis mõelda ja selle ise koodiks ehitada. Nii jääb
+            disaini ja arenduse vahele vähem asju kaotsi.
+          </p>
+
+          <div class="skill-groups">
+            <div class="reveal">
+              <h3>Arendus</h3>
+              <ul class="chips">
+                <li>HTML</li><li>CSS / SASS</li><li>JavaScript</li><li>Python</li><li>C</li><li>MySQL</li><li>Git &amp; GitHub</li>
+              </ul>
+            </div>
+            <div class="reveal">
+              <h3>Disain</h3>
+              <ul class="chips">
+                <li>Figma</li><li>UX/UI</li><li>Photoshop</li><li>Illustrator</li><li>Affinity</li><li>Canva</li>
+              </ul>
+            </div>
+            <div class="reveal">
+              <h3>Video</h3>
+              <ul class="chips">
+                <li>DaVinci Resolve</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Koodiaken, mis "kirjutab" ennast ise (tekst on script.js failis) -->
+        <div class="editor reveal" aria-hidden="true">
+          <div class="editor__bar">
+            <span class="editor__dots"><i></i><i></i><i></i></span>
+            <span class="editor__file">merili.js</span>
+          </div>
+          <pre class="editor__code"><code id="typed"></code><span class="editor__caret"></span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 KONTAKT ===================== -->
+    <section class="section contact" id="kontakt">
+      <div class="section__label">
+        <span>05</span> Kontakt
+      </div>
+
+      <p class="contact__pre reveal">Otsid praktikanti? Kirjuta mulle.</p>
+      <a href="mailto:tiikmerili@gmail.com" class="contact__mail reveal">
+        tiikmerili@gmail.com
+        <span class="contact__arrow">→</span>
+      </a>
+
+      <div class="contact__links reveal">
+        <a href="https://github.com/merili194" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/merilitiik/" target="_blank" rel="noopener">Instagram</a>
+        <!-- <a href="https://www.linkedin.com/in/SINU-PROFIIL/" target="_blank" rel="noopener">LinkedIn</a> -->
+        <button class="copy" id="copyMail" data-mail="tiikmerili@gmail.com">Kopeeri e-post</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Merili Tiik</span>
+    <span>Ehitatud käsitsi: HTML, CSS, JS</span>
+    <a href="#top">Tagasi üles ↑</a>
+  </footer>
+
+  <!-- Pildigalerii (avaneb pildile klikkides) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pildigalerii" hidden>
+    <button class="lightbox__close" id="lbClose" aria-label="Sulge">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Eelmine pilt">←</button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption><span id="lbCap"></span><span id="lbCount"></span></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Järgmine pilt">→</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
